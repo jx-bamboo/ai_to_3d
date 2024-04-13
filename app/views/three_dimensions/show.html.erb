@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @three_dimension %>
+
+<div>
+  <%= link_to "Edit this three dimension", edit_three_dimension_path(@three_dimension) %> |
+  <%= link_to "Back to three dimensions", three_dimensions_path %>
+
+  <%= button_to "Destroy this three dimension", @three_dimension, method: :delete %>
+</div>

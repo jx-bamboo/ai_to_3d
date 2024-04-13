@@ -1,0 +1,94 @@
+<div class="text-center three vh-100">
+  <%= render "layouts/header" %>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 position-relative">
+        <img src="/assets/three_index_bg2x.png" class="img-fluid vh-75">
+        <div class="position-absolute top-50 start-50 translate-middle h-100 w-100">
+
+          <div class="col pt-lg-5 pt-md-4 pt-sm-4 pt-3 ms-xl-4 ms-md-4 ps-xl-5 ps-lg-4 ps-md-5 ps-sm-5 ps-5 text-start">
+            <%= link_to 'Create', "/three", class: "text-light btn btn-sm rounded-5 ms-lg-5 px-3", style: "background: #177AFD" %>
+            <%= link_to 'My Models', "/three/my_models", class: "text-light btn btn-sm rounded-5 px-3", style: "background: #222A34" %>
+            <%= link_to 'Favorite', "/three/my_favorites", class: "text-light btn btn-sm rounded-5 px-3", style: "background: #222A34" %>
+          </div>
+
+          <div class="row row-cols-6 px-5 py-4">
+            <% 12.times do %>
+              <div class="col cursor-pointer">
+                <%= image_tag "three_placeholder_img.png", class: "img-fluid" %>
+              </div>
+            <% end %>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="container">
+    <div class="row navbar navbar-nav">
+      <div class="col-sm-12 row row-cols-3 d-flex justify-content-center">
+        <div class="col-1 text-bg-dark cred"> < / > </div>
+        <textarea class="col-6 cred" rows="5" aria-label="With textarea" style="background-color: #828282;"></textarea>
+        
+        <button class="col-1">Create</button>
+      </div>
+    </div>
+  </div> -->
+  <div class="container fixed-bottom mb-5">
+    <div class="row col-lg-6 mx-auto">
+      <div class="input-group">
+        <div class="input-group-text border-0" style="background-color: #828282;"><img src="/assets/create_logo.png" width="36"></div>
+
+        <div class="form-control p-0 position-relative border-0">
+          <textarea class="border-0 m-0 text-light no_outline_border_shadow w-100 h-100" placeholder="Please enter prompt..." style="background-color: #828282;"></textarea>
+        </div>
+
+        <div class="input-group-text border-0" style="background-color: #828282;">
+          <button class="border-0 p-0 rounded-1 me-2">
+            <img src="/assets/create_img_btn.png" width="36" alt="">
+          </button>
+          <button class="border-0 py-1 px-2 rounded-1 text-light btn_bg">Create</button>
+        </div>
+    
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="three_index three_content_bg mx-2 mx-sm-5 pt-2 pb-5">
+    <%#= image_tag "three_index_bg2x.png", class: "img-fluid" %>
+    <div class="row pt-3 px-5">
+      <div class="col pt-lg-4 pt-md-4 pt-sm-3 pt-5 ps-lg-5 ps-md-4 ps-sm-3 ps-0 text-start">
+        <%= link_to 'Create', "/three", class: "text-light btn btn rounded-5 px-4 my-1", style: "background: #177AFD" %>
+        <%= link_to 'My Models', "/three/my_models", class: "text-light btn btn rounded-5 px-4 my-1", style: "background: #222A34" %>
+        <%= link_to 'Favorite', "/three/my_favorites", class: "text-light btn btn rounded-5 px-4 my-1", style: "background: #222A34" %>
+      </div>
+    </div>
+    
+    <div class="row row-cols-2 row-cols-sm-4 row-cols-md-5 row-cols-lg-6 px-5 py-4">
+      <% 12.times do %>
+        <div class="col">
+          <%= image_tag "three_placeholder_img.png", class: "img-fluid" %>
+        </div>
+      <% end %>
+      
+
+    </div>
+
+  </div> -->
+</div>
+<!-- <p style="color: green"><%= notice %></p>
+
+<h1>Three dimensions</h1>
+
+<div id="three_dimensions">
+  <% @three_dimensions.each do |three_dimension| %>
+    <%= render three_dimension %>
+    <p>
+      <%= link_to "Show this three dimension", three_dimension %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New three dimension", new_three_dimension_path %> -->

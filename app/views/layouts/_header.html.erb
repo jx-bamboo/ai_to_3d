@@ -1,0 +1,93 @@
+<header class="py-3 px-lg-5 px-md-4 px-sm-2 navbar">
+  <div class="ps-2 nav navbar">
+    <%= link_to "/" do %>
+      <%= image_tag "h_logo_4x.png", width: "50", alt: "Logo" %>
+      <%#= image_tag("h_logo.png", srcset: { "h_logo_2x.png" => "2x", "h_logo_4x.png" => "4x" }) %>
+    <% end %>
+    <%#= controller.controller_name + controller.action_name %>
+    <%#= image_tag "h_logo_zaat3d2x.png", width: "190", alt: "Logo" %>
+  </div>
+
+  <div class="pe-2 nav navbar">
+    <% unless user_signed_in? %>
+      <a href="/login" class="text-light me-2 text-decoration-none head_login_btn_bg nav">
+        <span class="">Log in</span>
+      </a>
+    <% end %>
+
+    <!-- <li class="nav-item dropdown cred">
+      <a class="dropdown-toggle text-light nav" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+        <%= image_tag "h_menu.png", alt: "Menu", width: 28 %>
+      </a>
+
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+    </li> -->
+
+    <button class="navbar-toggler p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <!-- <span class="navbar-toggler-icon text-light"></span> -->
+      <%= image_tag "h_menu.png", alt: "Menu", width: 28 %>
+    </button>
+    <div class="offcanvas offcanvas-end text-light" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="background: #000930;border: 1px solid #3A4891; box-shadow: 0px 0px 30px 0px #3a4891 inset;">
+      <div class="offcanvas-header">
+        <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Dark offcanvas</h5> -->
+        <%= image_tag "h_logo_zaat3d.png", alt: "Logo" %>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <a class="text-light text-start text-decoration-none" aria-current="page" href="/">
+          <div class="lh-lg p-2 d-flex justify-content-start offcanvas-hover ">
+            <%= image_tag "offcanvas_home2x.png", class: "my-auto" %>
+            <span class="ms-2">Home</span>
+          </div>
+        </a>
+        <a class="text-light text-start text-decoration-none" aria-current="page" href="/three">
+          <div class="lh-lg p-2 d-flex justify-content-start offcanvas-hover ">
+            <i class="material-icons outlined my-auto">add</i>
+            <span class="ms-2">Create</span>
+          </div>
+        </a>
+        <a class="text-light text-start text-decoration-none" aria-current="page" href="/three/my_models">
+          <div class="lh-lg p-2 d-flex justify-content-start offcanvas-hover ">
+            <i class="material-icons outlined my-auto">view_in_ar</i>
+            <span class="ms-2">My Models</span>
+          </div>
+        </a>
+        <a class="text-light text-start text-decoration-none" aria-current="page" href="/three/my_favorites">
+          <div class="lh-lg p-2 d-flex justify-content-start offcanvas-hover ">
+            <i class="material-icons outlined my-auto">favorite</i>
+            <span class="ms-2">Favorite</span>
+          </div>
+        </a>
+        <hr />
+        <a class="text-light text-start text-decoration-none" aria-current="page" href="/price">
+          <div class="lh-lg p-2 d-flex justify-content-start offcanvas-hover ">
+            <i class="material-icons outlined my-auto">attach_money</i>
+            <span class="ms-2">Price</span>
+          </div>
+        </a>
+        <a class="text-light text-start text-decoration-none" aria-current="page" href="#">
+          <div class="lh-lg p-2 d-flex justify-content-start offcanvas-hover ">
+            <i class="material-icons outlined my-auto">token</i>
+            <span class="ms-2">Token</span>
+          </div>
+        </a>
+        <hr />
+        <% if user_signed_in? %>
+          <%= link_to destroy_user_session_path, class: "dropdown-item rounded", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, method: :delete do %>
+            <div class="lh-lg p-2 d-flex justify-content-start offcanvas-hover">
+              <i class="material-icons outlined my-auto">logout</i>
+              <span class="ms-2">Log out</span>
+            </div>
+          <% end %>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</header>

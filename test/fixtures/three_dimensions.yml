@@ -1,0 +1,33 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  thumbnail: MyString
+  schematic: MyString
+  litematic: MyString
+  nbt: MyString
+  glb: MyString
+  obj: MyString
+  stl: MyString
+  fbx: MyString
+  usd: MyString
+  draft_mark: 1
+  status: 1
+  user: one
+
+two:
+  title: MyString
+  description: MyText
+  thumbnail: MyString
+  schematic: MyString
+  litematic: MyString
+  nbt: MyString
+  glb: MyString
+  obj: MyString
+  stl: MyString
+  fbx: MyString
+  usd: MyString
+  draft_mark: 1
+  status: 1
+  user: two

@@ -1,0 +1,33 @@
+.login {
+  background-image: url("/assets/login_bg.png");
+  background-size: cover; /* 图片覆盖整个元素 */
+  background-position: center; /* 图片居中显示 */
+  background-repeat: no-repeat; /* 图片不重复 */
+}
+
+.min-width-img {
+  min-width: 360px; /* 设置图片的最低宽度为 200px */
+}
+
+.login_btn_bg {
+  background-image: url("/assets/login_btn_bg.png");
+  background-size: 100% 100%; /* 图片覆盖整个元素 */
+  background-position: center; /* 图片居中显示 */
+  background-repeat: no-repeat; /* 图片不重复 */
+}
+
+.input-outline-none {
+  outline: none;
+  background-color: #131313;
+}
+
+.form-bg {
+  background-image: url("/assets/sign_bg.png");
+  background-size: 100% 100%; /* 图片覆盖整个元素 */
+  background-position: center; /* 图片居中显示 */
+  background-repeat: no-repeat; /* 图片不重复 */
+}
+
+.offcanvas-hover:hover {
+  background-color: #172669;
+}

@@ -1,0 +1,87 @@
+<%= form_with(model: three_dimension) do |form| %>
+  <% if three_dimension.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(three_dimension.errors.count, "error") %> prohibited this three_dimension from being saved:</h2>
+
+      <ul>
+        <% three_dimension.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :thumbnail, style: "display: block" %>
+    <%= form.text_field :thumbnail %>
+  </div>
+
+  <div>
+    <%= form.label :schematic, style: "display: block" %>
+    <%= form.text_field :schematic %>
+  </div>
+
+  <div>
+    <%= form.label :litematic, style: "display: block" %>
+    <%= form.text_field :litematic %>
+  </div>
+
+  <div>
+    <%= form.label :nbt, style: "display: block" %>
+    <%= form.text_field :nbt %>
+  </div>
+
+  <div>
+    <%= form.label :glb, style: "display: block" %>
+    <%= form.text_field :glb %>
+  </div>
+
+  <div>
+    <%= form.label :obj, style: "display: block" %>
+    <%= form.text_field :obj %>
+  </div>
+
+  <div>
+    <%= form.label :stl, style: "display: block" %>
+    <%= form.text_field :stl %>
+  </div>
+
+  <div>
+    <%= form.label :fbx, style: "display: block" %>
+    <%= form.text_field :fbx %>
+  </div>
+
+  <div>
+    <%= form.label :usd, style: "display: block" %>
+    <%= form.text_field :usd %>
+  </div>
+
+  <div>
+    <%= form.label :draft_mark, style: "display: block" %>
+    <%= form.number_field :draft_mark %>
+  </div>
+
+  <div>
+    <%= form.label :status, style: "display: block" %>
+    <%= form.number_field :status %>
+  </div>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

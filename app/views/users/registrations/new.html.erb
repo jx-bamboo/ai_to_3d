@@ -1,0 +1,38 @@
+<div class="text-center login vh-100 position-relative">
+  <%= render "layouts/header" %>
+  <div class="position-absolute top-50 start-50 translate-middle">
+
+    <div class="col-sm-12 position-relative">
+      <%#= image_tag "sign_bg.png", width: "", class: "img-fluid min-width-img" %>
+      <div class="position-absolute top-50 start-50 translate-middle p-5 form-bg">
+
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= render "users/shared/error_messages", resource: resource %>
+
+          <div class="mb-3">
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control-lg border-0 shadow-none login_btn_bg text-light input-outline-none rounded-5", placeholder: "Email address" %>
+          </div>
+
+          <div class="mb-3">
+            <!-- <% if @minimum_password_length %>
+            <em class="text-light">(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br /> -->
+            <%= f.password_field :password, autocomplete: "new-password", class: "form-control-lg border-0 shadow-none login_btn_bg text-light input-outline-none rounded-5", placeholder: "Password" %>
+          </div>
+
+          <div class="mb-3">
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control-lg border-0 shadow-none login_btn_bg text-light input-outline-none rounded-5", placeholder: "Password again" %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit "Sign up", class: "form-control btn btn-lg border-0 shadow-none login_btn_bg text-light input-outline-none rounded-5" %>
+          </div>
+        <% end %>
+
+        <%= render "users/shared/links" %>
+
+      </div>
+    </div>
+
+  </div>
+</div>

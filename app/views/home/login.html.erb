@@ -1,0 +1,28 @@
+<div class="text-center login vh-100 position-relative">
+  <%= render "layouts/header" %>
+  <div class="position-absolute top-50 start-50 translate-middle d-flex align-items-between flex-column vstack">
+    
+    <a href="/users/sign_in">
+      <div class="position-relative my-2">
+        <%= image_tag "login_btn_bg2x.png", class: "img-fluid min-width-img" %>
+        <div class="position-absolute top-50 start-50 translate-middle d-flex flex-nowrap justify-content-around">
+          <i class="material-icons outlined my-auto text-light md-48 w-30 me-md-4 me-sm-2 me-2">mail</i>
+          <div class="w-70 m-auto text-light fs-3 text-nowrap">Sign in with Email</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="">
+      <div class="position-relative my-2">
+        <%= image_tag "login_btn_bg2x.png", class: "img-fluid min-width-img" %>
+        <div class="position-absolute top-50 start-50 translate-middle d-flex flex-nowrap justify-content-around">
+          <%= image_tag "metamask.png", width: 40, class: "w-30 me-md-4 me-sm-2 me-2" %>
+          <div class="w-70 m-auto text-light fs-3 text-nowrap">Sign in with Metamask</div>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+</div>
+

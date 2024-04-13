@@ -1,0 +1,64 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #02010F;
+}
+
+.basic_color {
+  color: #545454;
+}
+
+.basic_bg {
+  background-color: #545454;
+}
+
+.pro_color {
+  color: #7EC3D3;
+}
+
+.pro_bg {
+  background-color: #7EC3D3;
+}
+
+.pre_color {
+  color: #5787FB;
+}
+
+.pre_bg {
+  background-color: #5787FB;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.cred {
+  border: 1px solid red;
+}
+
+.btn_bg {
+  background-image: var(--bg_linear_gradient);
+}
+
+.btn_mouse_hover:hover {
+  background-image: linear-gradient(to bottom right, #5787FB 100%, #11E3E9 100%); 
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.no_outline_border_shadow {
+  outline: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.bg_none {
+  background-color: none;
+}

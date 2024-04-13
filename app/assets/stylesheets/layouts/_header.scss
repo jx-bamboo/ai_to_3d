@@ -1,0 +1,15 @@
+.head_login_btn_bg {
+  padding: 1px;
+  background-image: var(--bg_linear_gradient);
+  border-radius: 5px; 
+
+  span {
+    background-color: #020202;
+    border-radius: inherit;
+    padding: 1px 8px;
+
+    &:hover {
+      background-image: var(--bg_linear_gradient);
+    }
+  }
+}
