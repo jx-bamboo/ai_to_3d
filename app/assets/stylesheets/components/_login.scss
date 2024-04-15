@@ -1,5 +1,5 @@
 .login {
-  background-image: url("/assets/login_bg.png");
+  background-image: url("login_bg.png");
   background-size: cover; /* 图片覆盖整个元素 */
   background-position: center; /* 图片居中显示 */
   background-repeat: no-repeat; /* 图片不重复 */
@@ -10,7 +10,7 @@
 }
 
 .login_btn_bg {
-  background-image: url("/assets/login_btn_bg.png");
+  background-image: url("login_btn_bg.png");
   background-size: 100% 100%; /* 图片覆盖整个元素 */
   background-position: center; /* 图片居中显示 */
   background-repeat: no-repeat; /* 图片不重复 */
@@ -22,7 +22,7 @@
 }
 
 .form-bg {
-  background-image: url("/assets/sign_bg.png");
+  background-image: url("sign_bg.png");
   background-size: 100% 100%; /* 图片覆盖整个元素 */
   background-position: center; /* 图片居中显示 */
   background-repeat: no-repeat; /* 图片不重复 */
