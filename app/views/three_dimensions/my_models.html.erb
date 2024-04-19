@@ -1,25 +1,24 @@
 <div class="text-center three vh-100">
   <%= render "layouts/header" %>
 
-  <div class="three_index three_content_bg mx-2 mx-sm-5 pt-2 pb-5">
-    <%#= image_tag "three_index_bg2x.png", class: "img-fluid" %>
-    <div class="row pt-3 px-5">
-      <div class="col pt-lg-4 pt-md-4 pt-sm-3 pt-5 ps-lg-5 ps-md-4 ps-sm-3 ps-0 text-start">
-        <%= link_to 'Create', "/three", class: "text-light btn btn rounded-5 px-4 my-1", style: "background: #222A34" %>
-        <%= link_to 'My Models', "/three/my_models", class: "text-light btn btn rounded-5 px-4 my-1", style: "background: #177AFD" %>
-        <%= link_to 'Favorite', "/three/my_favorites", class: "text-light btn btn rounded-5 px-4 my-1", style: "background: #222A34" %>
+  <div class="container-full py-5 sticky-top">
+    <div class="row">
+      <div class="col-sm-12">
+        <%= link_to 'Create', "/three", class: "text-light btn btn-sm rounded-5 px-4", style: "background: #222A34" %>
+        <%= link_to 'My Models', "/three/my_models", class: "text-light btn btn-sm rounded-5 px-4", style: "background: #177AFD" %>
+        <%= link_to 'Favorite', "/three/my_favorites", class: "text-light btn btn-sm rounded-5 px-4", style: "background: #222A34" %>
       </div>
     </div>
-    
-    <div class="row row-cols-2 row-cols-sm-4 row-cols-md-5 row-cols-lg-6 px-5 py-4">
+  </div>
+
+  <div class="container-full px-1 px-sm-5">
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6">
       <% 1.times do %>
-        <div class="col">
+        <div class="col cursor-pointer">
           <%= image_tag "three_placeholder_img.png", class: "img-fluid" %>
         </div>
       <% end %>
-      
-
     </div>
-
   </div>
+
 </div>
