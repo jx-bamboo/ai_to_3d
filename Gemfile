@@ -44,6 +44,7 @@ end
 gem "bootstrap"
 gem "sass-rails"
 gem "devise"
+gem "devise-async"
 gem "material_icons"
 gem "postgresql"
 gem "pg"

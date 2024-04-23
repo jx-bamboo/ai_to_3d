@@ -9,6 +9,16 @@ body {
   background-color: #02010F;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+@-moz-document url-prefix() {
+  html, body {
+    scrollbar-width: none;
+  }
+}
+
 .basic_color {
   color: #545454;
 }
@@ -65,4 +75,12 @@ body {
 
 .input_bg_color {
   background-color: #828282;
+}
+
+.current_page_bg {
+  background-color: #177AFD;
+}
+
+.no_current_page_bg {
+  background-color: #222A34;
 }

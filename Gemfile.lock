@@ -128,6 +128,9 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-async (1.0.0)
+      activejob (>= 5.0)
+      devise (>= 4.0)
     drb (2.2.1)
     erubi (1.12.0)
     execjs (2.9.1)
@@ -343,6 +346,7 @@ DEPENDENCIES
   capybara
   debug
   devise
+  devise-async
   importmap-rails
   jbuilder
   material_icons

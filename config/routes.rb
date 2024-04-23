@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     collection do
       get :my_models
       get :my_favorites
+      get :favorite
     end
   end
   # devise_for :users

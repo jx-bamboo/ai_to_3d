@@ -94,4 +94,15 @@ Rails.application.configure do
   # ]
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+
+  #
+  config.action_mailer.default_url_options = { host: 'zaat.xyz' }
+	config.action_mailer.delivery_method = :smtp
+	config.action_mailer.smtp_settings = {
+		 :address        => 'smtp.mailgun.org',
+		 :port           => '587',
+		 :authentication => :plain,
+		 :user_name      => Rails.application.credentials.dig(:mail, :user_name),
+		 :password       => Rails.application.credentials.dig(:mail, :password)
+	}
 end

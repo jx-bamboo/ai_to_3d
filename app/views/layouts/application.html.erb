@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Zeal3D</title>
+    <title>Zaat</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,9 +11,8 @@
   </head>
 
   <body class="<%= controller.controller_name %><%= controller.action_name %>">
-    <div class="flash">
-      <%= render "layouts/flash_message" %>
-    </div>
+    <div class="flash"><%= render "layouts/flash_message" %></div>
+    <%= render "layouts/confirm_email_alert" if user_signed_in? && !current_user.confirmed? %>
     <%= yield %>
   </body>
 </html>

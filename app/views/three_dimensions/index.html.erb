@@ -4,9 +4,7 @@
   <div class="container-full py-5 sticky-top">
     <div class="row">
       <div class="col-sm-12">
-        <%= link_to 'Create', "/three", class: "text-light btn btn-sm rounded-5 px-4", style: "background: #177AFD" %>
-        <%= link_to 'My Models', "/three/my_models", class: "text-light btn btn-sm rounded-5 px-4", style: "background: #222A34" %>
-        <%= link_to 'Favorite', "/three/my_favorites", class: "text-light btn btn-sm rounded-5 px-4", style: "background: #222A34" %>
+        <%= render "navigation_link" %>
       </div>
     </div>
   </div>
@@ -23,21 +21,22 @@
 
   <div class="container fixed-bottom mb-5">
     <div class="row col-lg-6 mx-auto">
-      <div class="input-group">
-        <div class="input-group-text border-0 input_bg_color"><%= image_tag "create_logo.png" %></div>
+      <%= form_with(model: @three_dimension) do |f| %>
+        <div class="input-group">
+          <div class="input-group-text border-0 input_bg_color"><%= image_tag "create_logo.png" %></div>
 
-        <div class="form-control p-0 position-relative border-0">
-          <textarea class="border-0 m-0 text-light no_outline_border_shadow w-100 h-100 input_bg_color" placeholder="Please enter prompt..."></textarea>
-        </div>
+          <div class="form-control p-0 position-relative border-0">
+            <%= f.text_area :description, class: "border-0 m-0 text-light no_outline_border_shadow w-100 h-100 input_bg_color", placeholder: "Please enter prompt..." %>
+          </div>
 
-        <div class="input-group-text border-0 input_bg_color">
-          <button class="border-0 p-0 rounded-1 me-2">
-            <%= image_tag "create_img_btn.png", width: 36 %>
-          </button>
-          <button class="border-0 py-1 px-2 rounded-1 text-light btn_bg">Create</button>
+          <div class="input-group-text border-0 input_bg_color">
+            <button class="border-0 p-0 rounded-1 me-2">
+              <%= image_tag "create_img_btn.png", width: 36 %>
+            </button>
+            <%= f.submit "Create", class: "border-0 py-1 px-2 rounded-1 text-light three_create_btn" %>
+          </div>
         </div>
-    
-      </div>
+      <% end %>
     </div>
   </div>
 

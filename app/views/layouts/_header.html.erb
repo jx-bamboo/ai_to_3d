@@ -40,42 +40,31 @@
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <a class="text-light text-start text-decoration-none" aria-current="page" href="/">
-          <div class="lh-lg p-2 d-flex justify-content-start offcanvas-hover ">
-            <%= image_tag "offcanvas_home2x.png", class: "my-auto" %>
-            <span class="ms-2">Home</span>
-          </div>
+
+        <a class="icon-link text-light lh-lg p-2 w-100 offcanvas-hover text-decoration-none" href="/">
+          <i class="material-icons outlined">home</i>
+          Home
         </a>
-        <a class="text-light text-start text-decoration-none" aria-current="page" href="/three">
-          <div class="lh-lg p-2 d-flex justify-content-start offcanvas-hover ">
-            <i class="material-icons outlined my-auto">add</i>
-            <span class="ms-2">Create</span>
-          </div>
+        <a class="icon-link text-light lh-lg p-2 w-100 offcanvas-hover text-decoration-none" href="/three">
+          <i class="material-icons outlined">add</i>
+          Create
         </a>
-        <a class="text-light text-start text-decoration-none" aria-current="page" href="/three/my_models">
-          <div class="lh-lg p-2 d-flex justify-content-start offcanvas-hover ">
-            <i class="material-icons outlined my-auto">view_in_ar</i>
-            <span class="ms-2">My Models</span>
-          </div>
+        <a class="icon-link text-light lh-lg p-2 w-100 offcanvas-hover text-decoration-none" href="/three/my_models">
+          <i class="material-icons outlined">view_in_ar</i>
+          My Models
         </a>
-        <a class="text-light text-start text-decoration-none" aria-current="page" href="/three/my_favorites">
-          <div class="lh-lg p-2 d-flex justify-content-start offcanvas-hover ">
-            <i class="material-icons outlined my-auto">favorite</i>
-            <span class="ms-2">Favorite</span>
-          </div>
+        <a class="icon-link text-light lh-lg p-2 w-100 offcanvas-hover text-decoration-none" href="/three/my_favorites">
+          <i class="material-icons outlined">favorite</i>
+          My Favorites
         </a>
         <hr />
-        <a class="text-light text-start text-decoration-none" aria-current="page" href="/price">
-          <div class="lh-lg p-2 d-flex justify-content-start offcanvas-hover ">
-            <i class="material-icons outlined my-auto">attach_money</i>
-            <span class="ms-2">Price</span>
-          </div>
+        <a class="icon-link text-light lh-lg p-2 w-100 offcanvas-hover text-decoration-none" href="/price">
+          <i class="material-icons outlined">attach_money</i>
+          Price
         </a>
-        <a class="text-light text-start text-decoration-none" aria-current="page" href="#">
-          <div class="lh-lg p-2 d-flex justify-content-start offcanvas-hover ">
-            <i class="material-icons outlined my-auto">token</i>
-            <span class="ms-2">Token</span>
-          </div>
+        <a class="icon-link text-light lh-lg p-2 w-100 offcanvas-hover text-decoration-none" href="#">
+          <i class="material-icons outlined">token</i>
+          Token
         </a>
         <hr />
         <% if user_signed_in? %>

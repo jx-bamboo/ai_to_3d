@@ -4,21 +4,47 @@
   <div class="container-full py-5 sticky-top">
     <div class="row">
       <div class="col-sm-12">
-        <%= link_to 'Create', "/three", class: "text-light btn btn-sm rounded-5 px-4", style: "background: #222A34" %>
-        <%= link_to 'My Models', "/three/my_models", class: "text-light btn btn-sm rounded-5 px-4", style: "background: #177AFD" %>
-        <%= link_to 'Favorite', "/three/my_favorites", class: "text-light btn btn-sm rounded-5 px-4", style: "background: #222A34" %>
+        <%= render "navigation_link" %>
       </div>
     </div>
   </div>
 
   <div class="container-full px-1 px-sm-5">
     <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6">
-      <% 1.times do %>
-        <div class="col cursor-pointer">
+      <% @my_models.each do |model| %>
+        <div class="col cursor-pointer position-relative model_div">
           <%= image_tag "three_placeholder_img.png", class: "img-fluid" %>
+          <% if model.status == 0 %>
+            <span class="position-absolute top-0 end-0 badge rounded-pill no_current_page_bg">Creating</span>
+          <% end %>
+          <div class="text-light position-absolute top-50 start-50 translate-middle h-100 w-100 model_intro d-flex align-content-between flex-wrap">
+            <div class="text-left w-100 p-2"><%= truncate model.description %></div>
+            <div class="text-left w-100 p-2">
+              <%= link_to "/favorite", class: "text-light" do %>
+                <i class="material-icons outlined">favorite</i>
+              <% end %>
+            </div>
+          </div>
         </div>
       <% end %>
     </div>
   </div>
 
 </div>
+
+<style>
+  .model_div {
+
+  }
+  
+  .model_intro {
+    border-radius: 8px;
+    background-color: rgb(67, 67, 67, 0.8); /* 设置透明度 */
+    transition: opacity 0.5s; /* 过渡效果设置 */
+    opacity: 0;
+  }
+  
+  .model_div:hover .model_intro {
+    opacity: 1;
+  }
+</style>
