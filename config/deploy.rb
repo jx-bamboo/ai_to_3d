@@ -40,3 +40,21 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/syst
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
 set :rbenv_ruby, "3.3.0"
+
+# 安装Sidekiq
+namespace :sidekiq do
+  task :quiet do
+    on roles(:worker) do
+      execute :bundle, :exec, :'sidekiqctl', :quiet, "#{current_path}/tmp/pids/sidekiq.pid"
+    end
+  end
+
+  task :restart do
+    on roles(:worker) do
+      execute :sudo, :systemctl, :restart, 'sidekiq'
+    end
+  end
+end
+after 'deploy:starting', 'sidekiq:quiet'
+after 'deploy:restart', 'sidekiq:restart'
+  
