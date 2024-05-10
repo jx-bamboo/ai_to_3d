@@ -4,7 +4,7 @@ class ThreeDimensionsController < ApplicationController
 
   # GET /three_dimensions or /three_dimensions.json
   def index
-    @three_dimensions = ThreeDimension.all
+    # @three_dimensions = ThreeDimension.all
     @three_dimension = ThreeDimension.new
   end
 
@@ -28,9 +28,11 @@ class ThreeDimensionsController < ApplicationController
 
     if @three_dimension.save
       p 'ssssssssss'
+      ThreeModelJob.perform_later(params[:description])
 
       redirect_to my_models_three_dimensions_path, notice: "Success"
     else
+      ThreeModelJob.perform_later(params)
       @three_dimensions = ThreeDimension.all
       redirect_to three_dimensions_path, notice: "Something happened, please try again."
     end

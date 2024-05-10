@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  # config/routes.rb
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
+
   resources :orders
   resources :three_dimensions, path: "three" do
     collection do
